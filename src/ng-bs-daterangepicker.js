@@ -9,13 +9,13 @@
 
 	angular
 		.module('ngBootstrap', [])
-		.directive('input', ['$compile', '$parse', '$filter', function($compile, $parse, $filter) {
+		.directive('bsDaterangepicker', ['$compile', '$parse', '$filter', function($compile, $parse, $filter) {
 			return {
-				restrict: 'E',
+				restrict: 'A',
 				require: '?ngModel',
 				link: function($scope, $element, $attributes, ngModel) {
 
-					if ($attributes.type !== 'daterange' || ngModel === null) {
+					if (ngModel === null) {
 						return;
 					}
 
